@@ -1,0 +1,115 @@
+.widget-conteiner {
+    width: 325px;
+    height: 205px;
+    border-radius: 12px;
+    border: 1px solid #C4CAD080;
+    background-blend-mode: overlay;
+    background: linear-gradient(132.65deg, rgba(255, 255, 255, 0.5) 0.75%, rgba(255, 255, 255, 0) 44.6%);
+    background-color: #006FAC;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.widget-conteiner__top-box {
+    min-height: 97px;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid rgba(67, 152, 198, 1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.widget-conteiner__image-logo {
+    width: 139px;
+    height: 97px;
+}
+
+.widget-conteiner__image-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.widget-conteiner__temperature p {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+    user-select: none;
+}
+
+.widget-conteiner__temperature sup {
+    font-size: 25px;
+    line-height: 0;
+}
+
+.widget-conteiner__info-place-date p {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 1);
+    user-select: none;
+}
+
+.widget-conteiner_bottom-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(73px, 1fr));
+    gap: 10px;
+}
+
+.widget-conteiner__elem-day {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.widget-conteiner__elem-day svg {
+    stroke: rgba(255, 255, 255, 1);
+    opacity: 0.5;
+    fill: none;
+    width: 32px;
+    height: 32px;
+}
+
+.widget-conteiner__elem-day-part {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+    opacity: 0.5;
+}
+
+.widget-conteiner__elem-day-part-temperature {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+}
+
+.widget-conteiner__elem-day-part-temperature sup {
+    font-size: 10px;
+    line-height: 0;
+}
+
+
+
+@font-face {
+    font-family: "Helios Cond";
+    src: url("../fonts/ofont.ru_Helios\ Cond.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
