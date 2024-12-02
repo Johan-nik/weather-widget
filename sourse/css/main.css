@@ -1,6 +1,6 @@
-.widget-conteiner {
+.widgetConteiner {
     width: 325px;
-    height: 205px;
+    height: max-content;
     border-radius: 12px;
     border: 1px solid #C4CAD080;
     background-blend-mode: overlay;
@@ -10,76 +10,64 @@
     flex-direction: column;
     gap: 12px;
     padding: 12px;
+    position: relative;
 }
 
-.widget-conteiner__top-box {
+.widgetConteiner__topBox {
     min-height: 97px;
     padding: 0 0 12px 0;
     border-bottom: 1px solid rgba(67, 152, 198, 1);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.widget-conteiner__image-logo {
-    width: 139px;
-    height: 97px;
-}
 
-.widget-conteiner__image-logo img {
+.widgetConteiner__imageLogo img {
     width: 100%;
     height: 100%;
 }
 
-.widget-conteiner__temperature p {
+.widgetConteiner__time p {
     display: inline-block;
     margin: 0;
     font-family: "Helios Cond", sans-serif;
     font-weight: 400;
-    font-size: 42px;
+    font-size: 48px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.widgetConteiner__infoPlace p {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
     line-height: 50px;
     color: rgba(255, 255, 255, 1);
     user-select: none;
 }
 
-.widget-conteiner__temperature sup {
-    font-size: 25px;
-    line-height: 0;
-}
-
-.widget-conteiner__info-place-date p {
-    margin: 0;
-    font-family: "Helios Cond", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 1);
-    user-select: none;
-}
-
-.widget-conteiner_bottom-box {
+.widgetConteiner_bottomBox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(73px, 1fr));
     gap: 10px;
 }
 
-.widget-conteiner__elem-day {
+.widgetConteiner__elemDayBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widgetConteiner__infoDay {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    align-items: center;
+    gap: 8px;
 }
 
-.widget-conteiner__elem-day svg {
-    stroke: rgba(255, 255, 255, 1);
-    opacity: 0.5;
-    fill: none;
-    width: 32px;
-    height: 32px;
-}
-
-.widget-conteiner__elem-day-part {
+.widgetConteiner__elemDayTitle {
     display: inline-block;
     margin: 0;
     font-family: "Helios Cond", sans-serif;
@@ -90,22 +78,94 @@
     opacity: 0.5;
 }
 
-.widget-conteiner__elem-day-part-temperature {
+.widgetConteiner__elemDayTemperature {
     display: inline-block;
     margin: 0;
     font-family: "Helios Cond", sans-serif;
     font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: rgba(244, 246, 250, 1);
+}
+
+.widgetConteiner__elemDayTemperature sup {
     font-size: 20px;
+    line-height: 0;
+}
+
+.widgetConteiner__elemDayWeather {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 20px;
     color: rgba(244, 246, 250, 1);
 }
 
-.widget-conteiner__elem-day-part-temperature sup {
-    font-size: 10px;
-    line-height: 0;
+.widgetConteiner__dayWeatherInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 114px;
+}
+
+.widgetConteiner__infoWindHumidity {
+    display: flex;
+    gap: 4px;
+}
+
+.widgetConteiner__infoWindHumidity img {
+    width: 20px;
+    height: 20px;
+}
+
+.widgetConteiner__infoWindHumidity p {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+    text-align: center;
+}
+
+.widgetConteiner__buttonScroll {
+    position: absolute;
+    top: 42%;
+    display: none;
+}
+
+.widgetConteiner__buttonScroll.buttonRigth {
+    right: 12px;
 }
 
 
+.widgetConteiner__indicatorList {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+}
+
+a.active svg circle {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 1;
+}
+
+
+
+.widgetConteiner:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(132.65deg, rgba(255, 255, 255, 0.5) 0.75%, rgba(255, 255, 255, 0) 44.6%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: #006FAC;
+}
+
+.widgetConteiner:hover .widgetConteiner__buttonScroll {
+    display: block;
+}
 
 @font-face {
     font-family: "Helios Cond";
