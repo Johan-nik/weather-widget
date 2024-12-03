@@ -50,18 +50,12 @@
     user-select: none;
 }
 
-.widgetConteiner_bottomBox {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(73px, 1fr));
-    gap: 10px;
-}
-
 .widgetConteiner__elemDayBox {
     display: flex;
     justify-content: space-between;
 }
 
-.widgetConteiner__infoDay {
+.widgetConteiner_bottomBox {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -132,7 +126,9 @@
 .widgetConteiner__buttonScroll {
     position: absolute;
     top: 42%;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
 }
 
 .widgetConteiner__buttonScroll.buttonRigth {
@@ -154,7 +150,21 @@ a.active svg circle {
     fill-opacity: 1;
 }
 
+.widgetConteiner__sourceWeather  p{
+    margin: 0;
+    text-align: right;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(244, 246, 250, 1);
+    opacity: 0.5;
+}
 
+.widgetConteiner__sourceWeather span {
+    font-weight: 700;
+    text-decoration: underline;
+}
 
 .widgetConteiner:hover {
     background-blend-mode: overlay;
@@ -164,8 +174,10 @@ a.active svg circle {
 }
 
 .widgetConteiner:hover .widgetConteiner__buttonScroll {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
+
 
 @font-face {
     font-family: "Helios Cond";
